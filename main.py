@@ -1,15 +1,9 @@
 from NN_network import *
 from NN_layers import *
 
-from keras.utils import to_categorical
-from keras.datasets import mnist
-
 import numpy as np
-import random
 import pygame
-import time
 import math
-
 
 WIDTH = 900
 HEIGHT = 700
@@ -114,20 +108,6 @@ class Canvas:
     def is_screen_clear(self):
         return (255, 255, 255) not in self.pixel_array
 
-
-def preprocess_data(x, y, limit):
-    x = x.reshape(len(x), 1, 28, 28)
-    x = x.astype("float32") / 255
-
-    y = to_categorical(y)
-    y = y.reshape(len(y), 10, 1)
-    return x[:limit], y[:limit]
-
-
-(x_train, y_train), (x_test, y_test) = mnist.load_data()
-x_test, y_test = preprocess_data(x_test, y_test, 50)
-
-
 network = [
     Convolutional((1, 28, 28), 3, 5),
     Sigmoid(),
@@ -138,8 +118,7 @@ network = [
     Sigmoid()
 ]
 
-load_model(network, "mnist_model_conv_black_white")
-
+load_model(network, "mnist_model_conv")
 
 main = MainScreen(WIDTH, HEIGHT, FPS, "MNIST_AI", "Iosevka")
 canvas = Canvas(main, 28, 28, 15, 5)
@@ -169,9 +148,6 @@ while running:
                 predictions = []
             if (event.key == pygame.K_s):
                 canvas.save()
-            if (event.key == pygame.K_t):
-                inter = random.randint(0, x_test.shape[0] - 1)
-                canvas.set_pixel_array(x_test[inter])
 
         if (event.type == pygame.QUIT):
             running = False

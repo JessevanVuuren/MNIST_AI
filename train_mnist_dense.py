@@ -28,9 +28,10 @@ network = [
 ]
 
 
-train(network, mse, mse_prime, 30, 0.1, x_train, y_train)
+# train(network, mse, mse_prime, 30, 0.1, x_train, y_train)
 
-save_model(network, "mnist_model")
+# save_model(network, "mnist_model_dense")
+# load_model(network, "mnist_model_dense")
 
 for x, y in zip(x_test, y_test):
     output = predict(network, x)

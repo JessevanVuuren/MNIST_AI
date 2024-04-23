@@ -33,10 +33,10 @@ network = [
 # train(network, mse, mse_prime, 100, 0.1, x_train, y_train)
 
 # save_model(network, "mnist_model_conv_black_white")
-load_model(network, "mnist_model_conv_black_white")
+# load_model(network, "mnist_model_conv_black_white")
 
 
-numbers = [["zero", 0],["one", 0],["two", 0],["three", 0],["four", 0],["five", 0],["six", 0],["seven", 0],["eight", 0],["nine", 0],]
+numbers = [["zero", 0],["one", 0],["two", 0],["three", 0],["four", 0],["five", 0],["six", 0],["seven", 0],["eight", 0],["nine", 0]]
 
 right = 0
 for x, y in zip(x_test, y_test):
