@@ -12,5 +12,5 @@ The current trained model as an accuracy of 97.4%. The code to train this model 
 
 I'm aware that there are a lot of points to improve upon. If you see any improvements feel free to contribute
 
-![img1](https://github.com/JessevanVuuren/MNIST_AI/blob/master/screenshot/img1.png?raw=true)
-![img2](https://github.com/JessevanVuuren/MNIST_AI/blob/master/screenshot/img2.png?raw=true)
+![img1](https://github.com/JessevanVuuren/MNIST_AI/blob/master/schreenshot/img1.png?raw=true)
+![img2](https://github.com/JessevanVuuren/MNIST_AI/blob/master/schreenshot/img2.png?raw=true)
