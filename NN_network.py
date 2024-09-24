@@ -1,4 +1,3 @@
-from progress.bar import Bar
 from NN_layers import Dense, Convolutional
 import pickle
 
